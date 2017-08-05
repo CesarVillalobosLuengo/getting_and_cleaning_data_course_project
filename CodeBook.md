@@ -30,7 +30,17 @@ This code book  describes the variables, the data, and any transformations or wo
 	* The variable "X_train" is used to store the data "UCI HAR Dataset/train/X_train.txt" 
 	* The variable "y_test" is used to store the data "UCI HAR Dataset/test/y_test.txt" 
 	* The variable "y_train" is used to store the data "UCI HAR Dataset/train/y_train.txt" 
-
+*  Variables use for merge
+	* The variable "train" is used to merge "subject_train", "y_train" and  "X_train"
+	* The variable "test" is used to merge "subject_test", "y_test" and  "X_test"
+	* The variable "dataSetCombined " is used to merge "train" and "test"
+*  Variables use for get only de column "std" and "mean"
+	* The variable "meanstdcols" is used to stored only de column "std" and "mean", I included subjectID  and activityId columns
+	* The variable "dataSetCombined" is used to stored the data with the columns "meanstdcols"
+*  Variables use for get independent tidy data	with the average of each
+	* The variable "meltedData" is used to stored each row is a unique id-variable combination ("subjectID","activityId")
+	* The variable "secondDataSet" is used to stored the final and  independent tidy data set with the average of each
+	
 ## Transformation details
 
 There are 5 parts:
