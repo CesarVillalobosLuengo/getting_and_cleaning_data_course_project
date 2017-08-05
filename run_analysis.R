@@ -71,4 +71,4 @@ meltedData <- melt(dataSetCombined, id.vars=c("subjectID","activityId"))
 secondDataSet <- dcast(meltedData, subjectID+activityId ~ variable, mean,na.rm = TRUE)
 
 # write the tidy data set to a file
-write.csv(secondDataSet, "tidy.csv", row.names=FALSE)
+write.table(secondDataSet, "tidy.txt", row.names=FALSE)
